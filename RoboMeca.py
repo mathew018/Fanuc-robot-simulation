@@ -1,6 +1,7 @@
 #MathewJV
 #Simulación y control de movimiento de robot FANUC
 
+
 import math
 import cv2
 import mediapipe as mp
