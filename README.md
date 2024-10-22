@@ -3,23 +3,11 @@
 ## Note
 This project demonstrates a robotic arm control system using hand gestures. It leverages the OpenCV and MediaPipe libraries for hand detection and tracking, and integrates with RoboDK for robot manipulation.
 
-## Code Breakdown
-## 1. Imports:
-- ``` math ```: Provides mathematical functions.
-- ``` cv2 ```: Handles computer vision tasks (OpenCV library).
-- ``` mediapipe ```: Facilities hand landmark detection and tracking (MediaPipe library).
-- ``` from robodk import robolink ```: Enables interaction with Robodk for robot control.
-
-## 2. RoboDK Setup
+## 1. RoboDK Setup
 - ``` RDK = robolink.Robolink() ```: Establishes a connection to RoboDK.
 - ``` robot = RDK.Item('Fanuc M-10iA', robolink.ITEM_TYPE_ROBOT) ```: Selects the 'Fanuc M-10iA' robot from RoboDK (replace with your robot name if different).
 
-## 3. Video Capture and hand Detection
-- ``` cap = cv2.VideoCapture(1) ```: Initializes video capture from the webcam (index 1).
-- ``` hands = mp.solutions.hands.Hands(...) ```: Creates a MediaPipe hand detection object with specified confidence tresholds.
-- ``` mp_drawing = mp.solutions.drawing_utils ```: Provides utilities for drawing hand landmarks on the video frame.
-
-## 4. Movement Control Map
+## 2. Movement Control Map
 - ``` controls = { ... } ```: Defines a dictionary that maps fingertip and base joint indices (based on MediaPipe hand landmark IDs) to robot joint control parameters:
 - ``` tip ```: Index of the fingertip landmark for angle calculation.
 - ``` base ```: Index of the base landmark for angle calculation.
@@ -28,7 +16,7 @@ This project demonstrates a robotic arm control system using hand gestures. It l
 - ```min_dist```: Minimum distance threshold (in pixels) for angle calculation.
 - ```max_dist```: Maximum distance threshold (in pixels) for angle calculation.
 
-## 5. Distance and Angle Calculation
+## 3. Distance and Angle Calculation
 - ``` calculate_angle(tip, base, img_shape, control) ```:
     - Takes fingertip, base landmark objects, image shape, and control dictionary as input.
     - Calculates the distance between the fingertip and base landmarks using the Pythagorean theorem.
