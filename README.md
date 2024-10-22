@@ -3,7 +3,7 @@
 ## Note
 This project demonstrates a robotic arm control system using hand gestures. It leverages the OpenCV and MediaPipe libraries for hand detection and tracking, and integrates with RoboDK for robot manipulation.
 
-###I invite you to look at the result
+### I invite you to look at the result
 https://youtu.be/0ObS_tZWpkY
 
 ## 1. RoboDK Setup
