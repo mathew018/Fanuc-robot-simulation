@@ -3,6 +3,9 @@
 ## Note
 This project demonstrates a robotic arm control system using hand gestures. It leverages the OpenCV and MediaPipe libraries for hand detection and tracking, and integrates with RoboDK for robot manipulation.
 
+###I invite you to look at the result
+https://youtu.be/0ObS_tZWpkY
+
 ## 1. RoboDK Setup
 - ``` RDK = robolink.Robolink() ```: Establishes a connection to RoboDK.
 - ``` robot = RDK.Item('Fanuc M-10iA', robolink.ITEM_TYPE_ROBOT) ```: Selects the 'Fanuc M-10iA' robot from RoboDK (replace with your robot name if different).
